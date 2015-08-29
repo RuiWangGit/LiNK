@@ -139,4 +139,7 @@
   margin: 15px 0;
 }
 
+#forum #hidden-post {
+  display: none;
+}
 

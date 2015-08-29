@@ -6,7 +6,7 @@ link.factory('forumFactory',  function($http, $location) {
 
 		$http.post('/add', info).success(function(data) {
 			console.log("to make a new post data:", data);			
-			callback();	
+			callback(data);	
 		})
 	}
 
