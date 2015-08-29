@@ -4,12 +4,14 @@
 link.controller('forumController', function($scope, $location, $routeParams, forumFactory){
 
 
-
+	console.log('testig');	
 	$scope.addPost = function(){
-		console.log('testig');
+		console.log('testig11');
+
+		forumFactory.addPost($scope.newPost);
+
+		$('#myModal').modal('hide');
 	}
-
-
 
 
 });
