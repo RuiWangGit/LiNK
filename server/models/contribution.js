@@ -9,4 +9,4 @@ var contributionSchema = new mongoose.Schema({
 	updated_at: { type: Date, default: Date.now }
 })
 
-mongoose.model('Contribution', contributionSchema)
+mongoose.model('Contributions', contributionSchema)

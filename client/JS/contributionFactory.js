@@ -2,7 +2,8 @@ link.factory('contributionFactory', function($http){
 	var factory = {}
 
 	factory.getContributions = function(callback){
-		$http.get('contributions').success(function(output){
+		console.log("inside the http request")
+		$http.get('/contributions').success(function(output){
 			callback(output)
 		})
 	}

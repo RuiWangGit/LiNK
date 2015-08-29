@@ -3,17 +3,23 @@
 var posts = require('./../server/controllers/posts.js');
 
 
+var Contribution = require('./../server/controllers/contributions.js')
+
+
 module.exports = function(app) {
-    
-	app.post('/add', function(req, res){
-    	console.log('00000 add in post');
- 	})
+
+
+ app.post('/add', function(req, res){
+    console.log('00000 add in post');
+  })
+  app.get('/contributions', function(req, res){
+	  console.log("inside the route")
+	  Contribution.show(req, res);
+  })
+
+
 
 
 
 
 }// end of module export
-
-
-
-

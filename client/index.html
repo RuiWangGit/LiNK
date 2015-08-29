@@ -12,11 +12,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
 		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="css/header.css">
 		<!--Instagram Gallery Styling -->
 		<link rel="stylesheet" type="text/css" href="css/instagram.css">
 		<script type="text/javascript" src="JS/routes.js"></script>
 		<!-- Scripts for Angular -->
-		<script type="text/javascript" src="JS/routes.js"></script>
+		<!-- <script type="text/javascript" src="JS/routes.js"></script> -->
 		<script type="text/javascript" src="JS/contributionFactory.js"></script>
 		<script type="text/javascript" src="JS/contributionController.js"></script>
 		<script type="text/javascript" src="JS/forumFactory.js"></script>
@@ -25,5 +26,14 @@
 	<body>
 		<div ng-view="">
 		</div>
+		<nav class="navbar navbar-inverse">
+	<ul class="nav navbar-nav" id="nav">
+		<li><a href="#">Latest<span class="sr-only">(current)</span></a></li>
+		<li><a href="#">Photos</a></li>
+		<li><a href="#">Teams</a></li>
+		<li><a href="#">Forum</a></li>
+	</ul>
+</nav>
+
 	</body>
 </html>
