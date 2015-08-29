@@ -27,17 +27,15 @@
 .navbar-nav{
 	text-align: center;
 }
-
-li {
+nav li {
 	border: 1px solid black;
 	width: 355px;
 }
 
-li:hover {
+nav li:hover {
 	background-color: #dd3928;
-/*	color: black;*/
+	color: black;
 }
-
 .content {
 
 }
