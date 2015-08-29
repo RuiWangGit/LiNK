@@ -9,6 +9,9 @@ link.config(function ($routeProvider) {
 		.when('/instagram', {
 			templateUrl: './partials/instagram.html'
 		})
+		.when('/contribution', {
+			templateUrl: './partials/contribution.html'
+		})
 		.otherwise({
 			redirectTo: '/'
 		})
@@ -28,5 +31,5 @@ link.factory("InstagramFactory", function($http){
 link.controller("InstagramController", function($scope,InstagramFactory){
 	InstagramFactory.getPhotos(function(data){
 		$scope.pictures = data
-	}) 
-}) 
+	})
+})

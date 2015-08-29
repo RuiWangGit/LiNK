@@ -11,4 +11,4 @@ var commentSchema = new mongoose.Schema({
 
 })
 
-mongoose.model('Comment', commentchema);
+mongoose.model('Comment', commentSchema);
