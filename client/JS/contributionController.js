@@ -3,4 +3,9 @@ link.controller('contributionController', function($scope, contributionFactory){
 	contributionFactory.getContributions(function(data){
 		console.log(data);
 	})
+	$scope.addContribution = function(){
+		contributionFactory.addContribution($scope.newContribution, function(){
+			$scope.newContribution = {}
+		})
+	}
 })

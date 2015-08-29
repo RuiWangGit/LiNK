@@ -14,8 +14,11 @@ module.exports = (function() {
 					res.json(contributions);
 				}
 			})
+		},
+		add: function(req, res){
+			console.log('the req', req.body)
+			// var contribution = new Contribution({team: req.body.team})
 		}
-
 
 
 	}
