@@ -5,8 +5,8 @@ var contributionSchema = new mongoose.Schema({
 	contribution: Boolean,
 	amount: Number,
 	description: String,
-	created_at: { type: Date, default: Date.now }
+	created_at: { type: Date, default: Date.now },
 	updated_at: { type: Date, default: Date.now }
 })
 
-mongoose.model('Contribution', contributionSchema)
+mongoose.model('Contributions', contributionSchema)
