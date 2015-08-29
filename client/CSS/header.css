@@ -23,7 +23,12 @@ html,body{
 	font-size: 50pt;
 	font-family: Futura;
 	padding-top: 30px;
+	color: black;
 
+}
+
+.header {
+	margin-bottom: 0px;
 }
 
 .rescue {
@@ -32,8 +37,13 @@ html,body{
 
 .subtitle {
 	color: white;
-	font-size: 14pt;
+	font-size: 25pt;
 	font-weight: lighter;
+	margin-bottom: 60px;
+}
+
+#jungha {
+	opacity: 1;
 }
 
 .navbar {
@@ -68,4 +78,4 @@ nav li:hover {
 	position: absolute;
 	width: 100%;
 	margin-bottom: 0px;
-	}
+}
