@@ -8,7 +8,7 @@ var commentSchema = new mongoose.Schema({
 	userName:String,
 	created_at:{ type: Date, default: Date.now },
 	updated_at: { type: Date, default: Date.now }
-	
+
 })
 
 mongoose.model('Comment', commentchema);
