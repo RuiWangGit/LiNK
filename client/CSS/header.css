@@ -1,3 +1,19 @@
+html,body{
+	height: 100%;
+}
+.navbar-fixed-bottom{
+	margin-bottom: 0px;
+	border-width: 6px 0 0;
+    height: 60px; /* must not use percents here, must be 60px*/    
+}
+#content {
+    position: fixed;
+    top: 0px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    overflow:auto;
+}
 .header-div {
 
 	height: 665px;
@@ -22,10 +38,12 @@
 
 .navbar {
 	border-radius: 0px;
+	margin-bottom: 0px !important;
 }
 
 .navbar-nav{
 	text-align: center;
+	width: 100%;
 }
 nav li {
 	border: 1px solid black;
@@ -39,3 +57,15 @@ nav li:hover {
 .content {
 
 }
+/* Responsive Nav Bar */
+.navbar-nav>li {
+	width: 25%;
+}
+#wrapper{
+	margin: 0px;
+}
+#nav_container{
+	position: absolute;
+	width: 100%;
+	margin-bottom: 0px;
+	}
