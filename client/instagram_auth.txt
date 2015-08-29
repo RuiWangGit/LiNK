@@ -1,0 +1,13 @@
+curl \-F 'client_id=4f2e0c5001fe4f2f948b197669829a12' \
+    -F 'client_secret=44c0850e753d449b92d33fa1f5e33f12' \
+    -F 'grant_type=authorization_code' \
+    -F 'redirect_uri=http://www.libertyinnorthkorea.org/' \
+    -F 'code=c4815a8d2cf144a0a2235a6d42b990c4' \
+    https://api.instagram.com/oauth/access_token
+
+    ////////////
+    {"access_token":"1368406440.4f2e0c5.645c887cde2e46faa62f8d182d837060","user":{"username":"teodorcataniciu","bio":"","website":"","profile_picture":"https:\/\/igcdn-photos-g-a.akamaihd.net\/hphotos-ak-xap1\/t51.2885-19\/11193165_1434613320173470_1042954023_a.jpg","full_name":"Teodor C\u0103t\u0103niciu","id":"1368406440"}}bash-3.2# 
+
+    //////////////
+    API Req Link
+    https://api.instagram.com/v1/tags/LibertyInNorthKorea/media/recent?access_token=1368406440.4f2e0c5.645c887cde2e46faa62f8d182d837060
