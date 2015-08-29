@@ -1,0 +1,119 @@
+
+<link rel="stylesheet" type="text/css" href="./../CSS/forum.css">
+
+<div id="forum" ng-controller="forumController">
+
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">New Post</button>
+
+    <div id="forum-posts">
+
+        <div class="single-post">
+            <input type="checkbox" id="question1"   class="post">
+            <div class="plus">+</div>
+            <label  for="question1" class="title">
+                Who is the Sacramento box for?
+            </label>
+            <div class="post-content">
+
+                <div class="description">
+                    
+                        lasdlfalsdlfals
+                </div>  
+                <div class="comments">
+                    <div class="comment" >
+                            sdfsdfs
+                    </div>
+                     <div class="comment" >
+                            sdfsdfs
+                    </div>
+
+
+                </div>
+
+                <input type="text" class="comment-box"> 
+                
+
+            </div>
+            
+        </div>
+
+
+
+        <div class="signle-post">
+            <input type="checkbox"  id="question2" name="q"  class="post">
+            <div class="plus">+</div>
+            <label  for="question2" class="title">
+                Who is the Sacramento boxfff for?
+            </label>
+            <div class="description">
+                <p>Anyone who has had any kind of connection with Baltimore at some point in their life would be an ideal candidate for this box. It makes a really great gift idea for someone who used to live in the area and has since moved out of town.</p>
+
+            </div>  
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">New Post</h4>
+                </div>
+
+                <div class="modal-body">               
+                    <form role="form" ng-submit="addPost()">
+                        <div class="form-group">
+                            <label for="userName">User Name:</label>
+                            <input type="userName" class="form-control" id="userName" placeholder="Enter User Name" ng-model="newPost.userName" ng-init="newPost.userName = 'rui wang'">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title:</label>
+                            <input type="title" class="form-control" id="title" placeholder="Enter Title" ng-model="newPost.title" ng-init="newPost.title = 'test title'">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea class="form-control" rows="5" id="description" ng-model="newPost.description" ng-init="newPost.description = 'testn desc'"></textarea>
+                        </div>
+                                                             
+                        <button type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+      
+        
+        </div>
+    </div>
+
+
+
+     <div class="hidden-post-content">
+        
+        <div class="description">
+            <p></p>
+
+        </div>  
+        <div class="comments">
+            <div class="comment" >
+                    sdfsdfs
+            </div>
+             <div class="comment" >
+                    sdfsdfs
+            </div>
+
+
+        </div>
+
+        <input type="text" class="comment-box"> 
+
+    </div>
+
+</div>

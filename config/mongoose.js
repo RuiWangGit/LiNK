@@ -10,3 +10,5 @@ fs.readdirSync(modelsPath).forEach(function(file){
 		require(modelsPath + '/' + file);
 	}
 });
+
+

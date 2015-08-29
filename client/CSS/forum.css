@@ -1,0 +1,142 @@
+
+#forum  {
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  padding: 0 60px 0 0;
+}
+
+#forum .content {
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  padding: 0 60px 0 0;
+}
+
+#forum .centerplease {
+  margin: 0 auto;
+  max-width: auto;
+  font-size: 40px;
+}
+
+#forum .title {
+  position: relative;
+  background: #8E6666;
+  margin: 0;
+  padding: 10px 10px 10px 50px;
+  display: block;
+  width:100%;
+  cursor: pointer;
+  color: white;
+}
+
+/*#forum .description {
+  background: white;
+  padding: 0px 15px;
+  margin: 5px 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .7s ease;
+  -moz-transition: .7s ease;
+  -o-transition: .7s ease;
+  transition: .7s ease;
+}
+
+#forum .comments {
+  background: white;
+  padding: 0px 15px;
+  margin: 5px 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .7s ease;
+  -moz-transition: .7s ease;
+  -o-transition: .7s ease;
+  transition: .7s ease;
+}
+
+#forum .comment-box {
+  background: white;
+  padding: 0px 15px;
+  margin: 5px 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .7s ease;
+  -moz-transition: .7s ease;
+  -o-transition: .7s ease;
+  transition: .7s ease;
+}
+
+#forum .post:checked ~ .description{
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+}
+
+#forum .post:checked ~ .comments{
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+}
+#forum .post:checked ~ .comment-box{
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+}
+*/
+
+#forum .plus {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 0;
+  z-index: 5;
+  font-size: 2em;
+  line-height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+  color: white;
+  background-color: rgb(220, 57, 38);
+  height:40px;
+  width:40px;
+  text-align: center;
+  padding-top:6px;
+
+}
+
+#forum .post:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#forum .post {
+  display: none;
+}
+
+
+#forum .hidden-post-content{
+	display: none;
+
+}
+
+#forum .single-post{
+  margin: 15px 0;
+}
+
+
