@@ -18,6 +18,9 @@ link.config(function ($routeProvider) {
 		.when('/contribution/add', {
 			templateUrl: './partials/addContribution.html'
 		})
+		.when('/maps', {
+			templateUrl: './partials/maps.html'
+		})
 		.otherwise({
 			redirectTo: '/'
 		})
