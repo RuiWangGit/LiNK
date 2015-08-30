@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Rescue Teams</title>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <head>
+      <title>Rescue Teams</title>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../CSS/search.css">
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-        <!-- Latest compiled JavaScript -->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-<link rel="stylesheet" type="text/css" href="../css/header.css">
+      <!-- Latest compiled JavaScript -->
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+     <link rel="stylesheet" type="text/css" href="../css/header.css">
         <style type="text/css">
             /* Set a size for our map container, the Google Map will take up 100% of this container */
             #map {
@@ -36,23 +37,26 @@
             }
         </style>
 
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        
-        <script type="text/javascript" src="../JS/map_active.js"></script>
-    </head>
-    <body>
-    
-        <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
-        
-        <!-- <img src="jungha.png" style="position: absolute; bottom: 100px; left: 30%; opacity: .25"> -->
-        <div id="wrapper">
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+      <script type="text/javascript" src="../JS/map_search.js"></script>
+  </head>
+  <body>
+  <div id="wrapper">
         <div id="content">
         <div class="container">
             <img src="../img/logo_clean.png" alt="logo_clean" width="50" height="50" id="link_clean"> <h2 id="map_h2">LiNK Global</h2>
         <div id="map_nav">
           <a href="http://localhost:8000/partials/maps.html">All Teams |</a>
           <a href="http://localhost:8000/partials/active.html">Active Teams |</a>
-            <a href="http://localhost:8000/partials/search.html">Search Team </a>
+          <a href="http://localhost:8000/partials/search.html">Search Team </a>
+  <!-- Search Tab !!! -->
+           <form action="" class="search-form" id="map_search">
+                <div class="form-group has-feedback">
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" class="form-control" name="search" id="search-field" placeholder="search">
+                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+            </form>
           </div>
            <br>
            <div id="map"></div>
@@ -71,5 +75,5 @@
         </div>
     </div>
     </div>
-    </body>
+  </body>
 </html>
