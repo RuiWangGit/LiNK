@@ -34,8 +34,7 @@ html,body{
 }
 
 #logo {
-	margin: 0px auto;
-	display: block;
+	margin-right: 250px;
 }
 
 .container {
@@ -50,6 +49,7 @@ html,body{
 .header {
 	margin-bottom: 0px;
 	display: inline-block;
+	margin-right: 380px;
 
 }
 
@@ -75,10 +75,10 @@ html,body{
 #overlay {
 	/*position: absolute;*/
 	height: 252px;
-	width: 414px;
-	top: 39%;
+	width: 383px;
+	top: 200px;
 	bottom:0;
-	left: 35%;
+	left: 520px;
 	right:0;
 	z-index: 1000;
     background-color: #dd3928;
@@ -133,7 +133,7 @@ nav li:hover {
 .navbar-nav>li {
 	width: 20%;
 }
-
+html, body {margin:0;padding:0;height:100%;}
 .ng-scope {
 	height: 100% !important;
 }
