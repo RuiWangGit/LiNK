@@ -8,13 +8,16 @@ html,body{
     height: 60px; /* must not use percents here, must be 60px*/
 }
 
-#content {
+/*#content {
     position: fixed;
     top: 0px;
     bottom: 20px;
     left: 0;
     right: 0;
     overflow: auto;
+}*/
+#content {
+	height: 100%;
 }
 
 .header-div {
@@ -70,7 +73,7 @@ html,body{
 }
 
 #overlay {
-	position: absolute;
+	/*position: absolute;*/
 	height: 252px;
 	width: 383px;
 	top: 200px;
@@ -82,6 +85,13 @@ html,body{
     opacity: .9;
     border-bottom: 2px dashed white;
     padding-top: 10%;
+	/* DJ added to fix the centering issue */
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	/*margin-top: 100px;*/
 }
 
 .progress {
@@ -112,16 +122,19 @@ nav li:hover {
 	color: black;
 }
 
-#updates {
+/*#updates {
 	height: 500px;
 	width: 100%;
 	text-align: center;
-	/*background-color: red;*/
-}
+	background-color: red;
+}*/
 
 /* Responsive Nav Bar */
 .navbar-nav>li {
 	width: 20%;
+}
+.ng-scope {
+	height: 100% !important;
 }
 /*#wrapper{
 	margin: 0px;

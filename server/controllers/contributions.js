@@ -13,7 +13,7 @@ module.exports = (function() {
 					console.log('succesfully got contributions from db', contributions)
 					res.json(contributions);
 				}
-			}).limit(10).sort({'created_at': -1});
+			}).limit(20).sort({'created_at': -1});
 		},
 		add: function(req, res){
 			console.log('the req', req.body)
