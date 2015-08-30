@@ -5,7 +5,7 @@ html,body{
 .navbar-fixed-bottom {
 	margin-bottom: 0px;
 	border-width: 6px 0 0;
-    height: 60px; /* must not use percents here, must be 60px*/    
+    height: 60px; /* must not use percents here, must be 60px*/
 }
 
 #content {
@@ -35,11 +35,11 @@ html,body{
 }
 
 .container {
-	left: 300px; 
+	left: 300px;
 	position: absolute;
 	background-color: #fff;
     background-color: rgba(255,255,255,0.5);
-	width: 500px; 
+	width: 500px;
 	margin:0 auto;
 }
 
@@ -63,7 +63,7 @@ html,body{
 
 #jungha {
 	opacity: 1;
-	height: 488px;  
+	height: 488px;
 	width: 383px;
 	/*position: relative;*/
 	/*border: 2px solid white;*/
@@ -71,7 +71,7 @@ html,body{
 
 #overlay {
 	position: absolute;
-	height: 252px;  
+	height: 252px;
 	width: 383px;
 	top: 200px;
 	bottom:0;
@@ -115,6 +115,7 @@ nav li:hover {
 #updates {
 	height: 500px;
 	width: 100%;
+	text-align: center;
 	/*background-color: red;*/
 }
 
