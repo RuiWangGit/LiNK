@@ -6,7 +6,7 @@ link.config(function ($routeProvider) {
 		.when('/', {
 			templateUrl: './partials/home.html'
 		})
-		.when('/', {
+		.when('/forum', {
 			templateUrl: './partials/forum.html'
 		})
 		.when('/instagram', {
@@ -17,6 +17,9 @@ link.config(function ($routeProvider) {
 		})
 		.when('/contribution/add', {
 			templateUrl: './partials/addContribution.html'
+		})
+		.when('/maps', {
+			templateUrl: './partials/maps.html'
 		})
 		.otherwise({
 			redirectTo: '/'
