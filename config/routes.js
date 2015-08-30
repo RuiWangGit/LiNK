@@ -15,6 +15,14 @@ module.exports = function(app) {
     	console.log('111111 add in comment');
     	comments.add(req, res);
   	})
+  	app.post('/show/posts', function(req, res){
+  		console.log('2222 show in post');
+    	posts.show(req, res);
+  	})
+  	app.post('/show/comments', function(req, res){
+  		console.log('3333 show in comment');
+    	comments.show(req, res);
+  	})
 
   app.get('/contributions', function(req, res){
 	  console.log("inside the route")

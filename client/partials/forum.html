@@ -8,58 +8,39 @@
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">New Post</button>
 
     <div id="forum-posts">
+            
+        <div id="post-{{post._id}}" class="single-post"   ng-repeat="post in posts | filter:search | orderBy: 'created_at'" >
 
-      <!--   <div class="single-post">
-            <input type="checkbox" id="question1"   class="post">
-            <div class="plus">+</div>
-            <label  for="question1" class="title">
-                Who is the Sacramento box for?
+            <input type="checkbox" id="id{{post._id}}"   class="post">
+            <div  class="plus">+</div>
+            <label  for="id{{post._id}}" class="title" ng-click="showComments($event); ">
+                    {{post.title}}
             </label>
-            <div class="post-content">
 
-                <div class="description">
-                    
-                        lasdlfalsdlfals
-                </div>  
-                <div class="comments">
-                    <div class="comment" >
-                            sdfsdfs
-                    </div>
-                     <div class="comment" >
-                            sdfsdfs
-                    </div>
+            <div class="description"> {{post.userName}}: {{post.description}}      </div>  
 
-
-                </div>
-
-                <form class="form-inline form-comment" role="form" ng-submit="addComment($this)">
+             <form class="form-inline form-comment" role="form" ng-submit="addComment('{{post._id}}')">
                     <div class="form-group username-box">                        
-                         <input type="text" class="form-control " name="userName" placeholder="your name" ng-model="newComment.userName" ng-init="newComment.userName = 'rui wang'">
+                         <input type="text" class="form-control " name="userName" placeholder="your name" ng-model="newComment.userName" ng-init="newComment.userName = '' ">
                     </div>
                      <div class="form-group comment-box">                        
-                         <input type="text"  class="form-control " name="comment" placeholder="commenting.." ng-model="newComment.comment" ng-init="newComment.comment='i said something'"></input>
+                         <input type="text"  class="form-control " name="comment" placeholder="commenting.." ng-model="newComment.comment" ng-init="newComment.comment='' "></input>
                     </div>
+                    <input type="hidden" class="hidden_id" name="post_id" ng-value="">
                     <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+            </form>
+
+            <div class="comments">
+                <div class="comment" ng-repeat="comment in comments | filter:search | orderBy: 'created_at'" >
+                        {{comment.comment}}  by {{comment.userName}}
+                </div>             
+            </div>
+
+            
                 
 
-            </div>
-            
         </div>
- -->
 
-
-        <!-- <div class="signle-post">
-            <input type="checkbox"  id="question2" name="q"  class="post">
-            <div class="plus">+</div>
-            <label  for="question2" class="title">
-                Who is the Sacramento boxfff for?
-            </label>
-            <div class="description">
-                <p>Anyone who has had any kind of connection with Baltimore at some point in their life would be an ideal candidate for this box. It makes a really great gift idea for someone who used to live in the area and has since moved out of town.</p>
-
-            </div>  
-        </div> -->
 
     </div>
 
@@ -83,15 +64,15 @@
                     <form role="form" ng-submit="addPost($event)">
                         <div class="form-group">
                             <label for="userName">User Name:</label>
-                            <input type="userName" class="form-control" id="userName" placeholder="Enter User Name" ng-model="newPost.userName" ng-init="newPost.userName = 'rui wang'">
+                            <input type="userName" class="form-control" id="userName" placeholder="Enter User Name" ng-model="newPost.userName" ng-init="newPost.userName = '' ">
                         </div>
                         <div class="form-group">
                             <label for="title">Title:</label>
-                            <input type="title" class="form-control" id="title" placeholder="Enter Title" ng-model="newPost.title" ng-init="newPost.title = 'test title'">
+                            <input type="title" class="form-control" id="title" placeholder="Enter Title" ng-model="newPost.title" ng-init="newPost.title = '' ">
                         </div>
                         <div class="form-group">
                             <label for="description">Description:</label>
-                            <textarea class="form-control" rows="5" id="description" ng-model="newPost.description" ng-init="newPost.description = 'testn desc'"></textarea>
+                            <textarea class="form-control" rows="5" id="description" ng-model="newPost.description" ng-init="newPost.description = '' "></textarea>
                         </div>
                                                              
                         <button type="submit" class="btn btn-default"  >Submit</button>
@@ -112,7 +93,7 @@
         <input type="checkbox" id=""   class="post">
         <div    class="plus">+</div>
         <label  for="" class="title" ng-click="showComments($event); ">
-                Who is the Sacramento box for?
+                
         </label>
 
 
@@ -125,12 +106,12 @@
 
 
 
-             <form class="form-inline form-comment" role="form" ng-submit="addComment($event)">
+             <form class="form-inline form-comment" role="form" ng-submit="">
                     <div class="form-group username-box">                        
-                         <input type="text" class="form-control " name="userName" placeholder="your name" ng-model="newComment.userName" ng-init="newComment.userName = 'rui wang'">
+                         <input type="text" class="form-control " name="userName" placeholder="your name" ng-model="newComment.userName" ng-init="newComment.userName = '' ">
                     </div>
                      <div class="form-group comment-box">                        
-                         <input type="text"  class="form-control " name="comment" placeholder="commenting.." ng-model="newComment.comment" ng-init="newComment.comment='i said something'"></input>
+                         <input type="text"  class="form-control " name="comment" placeholder="commenting.." ng-model="newComment.comment" ng-init="newComment.comment='' "></input>
                     </div>
                     <input type="hidden" class="hidden_id" name="post_id" ng-value="">
                     <button type="submit" class="btn btn-default">Submit</button>
@@ -138,7 +119,7 @@
 
             <div class="comments">
                 <div class="comment" >
-                        sdfsdfs
+                        
                 </div>             
             </div>
 
