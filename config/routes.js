@@ -23,6 +23,9 @@ module.exports = function(app) {
   		console.log('3333 show in comment');
     	comments.show(req, res);
   	})
+    app.get('/maps', function(req,res){
+      res.sendFile(__dirname+"/./client/partials/maps.html")
+    })
 
   app.get('/contributions', function(req, res){
 	  console.log("inside the route")

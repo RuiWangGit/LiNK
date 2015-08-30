@@ -7,15 +7,21 @@
   margin-bottom: 50px;
   margin-top: 50px;
 }
+#forum_title{
+  display: inline-block;
+}
 
 #forum button{
-  background: #E46666;
-  border: 1px solid  red; 
-  color:white;
+  border: 1px solid red; 
+  border-radius: 0px !important;
+  background: transparent;
+  color:#000000;
+  padding: 10px !important;
+  margin-left: 50%;
 }
 
 #forum button:hover{
-  background: #EA9898;
+  background: #DD3727;
   color:white;
 }
 
@@ -34,15 +40,15 @@
 
 #forum .title {
   position: relative;
-  background: #B96C6C;
+  background: transparent;
   margin: 0;
   padding: 10px 10px 10px 50px;
   display: block;
   width:100%;
   cursor: pointer;
-  color: white;
+  color: #000000;
   box-shadow: 3px 3px 2px 2px rgba(50, 50, 50, 0.75);
-  max-width: 500px;
+  max-width: 570px;
   overflow-y:hidden;
   overflow-x:scroll;
 }
@@ -283,6 +289,7 @@
 }
 #forum .comment-box input {
   width:100%;
+  margin-bottom: 10px;
 }
 
 #forum .comment{

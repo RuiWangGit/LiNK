@@ -125,7 +125,7 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 		forumFactory.addComment($scope.newComment, function(data){
 
 
-			$( '#hidden-post  .comments .comment'  ).html( $scope.newComment.comment+" By "+ "<span class='name-span'>"+ $scope.newComment.userName+"</span> ");
+			$( '#hidden-post  .comments .comment'  ).html( "<strong>"+$scope.newComment.userName+"</strong>"+" says:<br>"+$scope.newComment.comment);
 	    	var div = $('#hidden-post .comments .comment');
 	    	var tmp = div.clone();
             $( '#post-'+data.post_id+'  .comments '  ).append(tmp );

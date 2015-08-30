@@ -34,7 +34,8 @@ html,body{
 }
 
 #logo {
-	margin-right: 250px;
+	margin: 0px auto;
+	display: block;
 }
 
 .container {
@@ -49,7 +50,6 @@ html,body{
 .header {
 	margin-bottom: 0px;
 	display: inline-block;
-	margin-right: 380px;
 
 }
 
@@ -75,8 +75,8 @@ html,body{
 #overlay {
 	/*position: absolute;*/
 	height: 252px;
-	width: 383px;
-	top: 200px;
+	width: 414px;
+	top: 39%;
 	bottom:0;
 	left: 35%;
 	right:0;
