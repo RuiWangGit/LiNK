@@ -12,13 +12,13 @@
             <input type="checkbox" id="id{{post._id}}"   class="post">
             <div  class="plus"></div>
             <label  for="id{{post._id}}" class="title" ng-click="showComments($event); ">
-                    {{post.title}}   <span style="float:right; font-size:10px; font-weight:normal; "> {{post.created_at | date:'MMM dd, yyyy HH:mm:ss' }} </span>
+                    {{post.title}}   <span style="float:right; font-size:10px; font-weight:normal; "> </span><span am-time-ago="post.created_at" ></span> 
             </label>
 
             <div class="description"> <span class="name-span"> <strong>{{post.userName}}</strong></span>, LiNK Member: <br> {{post.description}} <hr>             </div>
 
              <form class="form-inline form-comment" role="form" ng-submit="addComment(post._id)">
-                    
+
                     <div class="form-group username-box ">
                          <input type="text" class="form-control " name="userName" placeholder="your name" ng-model="newComment.userName" ng-init="newComment.userName = '' ">
                     </div>
@@ -27,7 +27,7 @@
                     </div>
                     <input type="hidden" class="hidden_id" name="post_id" ng-value="">
                     <button type="submit" class="btn btn-default pull-right" style="margin-top:0;margin-right:0;height:40px;">Submit</button>
-                   
+
             </form>
 
 
@@ -35,7 +35,7 @@
             <h3>Answers:</h3><hr>
                 <div class="comment" ng-repeat="comment in comments | filter:search | orderBy: 'created_at'" >
                     <strong>{{comment.userName}}</strong> says:<br>
-                        {{comment.comment}}     <span style="float:right; font-size:10px; font-weight:normal; "> {{comment.created_at | date:'MMM dd, yyyy HH:mm:ss' }} </span>
+                        {{comment.comment}}     <span style="float:right; font-size:10px; font-weight:normal; "></span> <span am-time-ago="comment.created_at" ></span>
                 </div>
             </div>
 

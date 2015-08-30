@@ -1,5 +1,5 @@
 //inject the ngRoute dependency to the module
-var link = angular.module('link', ['ngRoute']);
+var link = angular.module('link', ['ngRoute', 'angularMoment']);
 //Use the config method to set up routing
 link.config(function ($routeProvider) {
 	$routeProvider

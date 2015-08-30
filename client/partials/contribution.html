@@ -2,15 +2,22 @@
 	<style>
 	#update {
 		text-align: center;
+		display: inline-block;
+	}
+	#updatediv {
+		text-align: center;
 	}
 	</style>
-	<h1 id="update">Updates</h1>
+	<div id="updatediv">
+		<img src="img/logo_red.png" alt="logo clean" width=50 height=50>
+		<h1 id="update">Updates</h1>
+	</div>
 	<div class="row">
 		<div class="col-md-6 text-center">
 			<h2>Contributions</h2>
 			<div ng-repeat="contribution in contributions">
 				<div ng-if="contribution.contribution == true">
-					<p>Team <span ng-bind="contribution.team"></span> contributed $<span ng-bind="contribution.amount"></span> - <span ng-bind="contribution.created_at | date: short"></span></p>
+					<p>Team <span ng-bind="contribution.team"></span> contributed $<span ng-bind="contribution.amount"></span> - <span am-time-ago="contribution.created_at"></span></p>
 				</div>
 			</div>
 		</div>
@@ -18,7 +25,7 @@
 			<h2>Messages</h2>
 			<div ng-repeat="contribution in contributions">
 				<div ng-if="contribution.contribution == false">
-					<p>Team <span ng-bind="contribution.team"></span> says: <span ng-bind="contribution.description"></span> - <span ng-bind="contribution.created_at | date: short"></span></p>
+					<p>Team <span ng-bind="contribution.team"></span> says: <span ng-bind="contribution.description"></span> - <span am-time-ago="contribution.created_at"></span></p>
 				</div>
 			</div>
 		</div>
