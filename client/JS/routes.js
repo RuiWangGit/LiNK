@@ -12,14 +12,17 @@ link.config(function ($routeProvider) {
 		.when('/instagram', {
 			templateUrl: './partials/instagram.html'
 		})
-		.when('/contribution', {
-			templateUrl: './partials/contribution.html'
-		})
+		// .when('/contribution', {
+		// 	templateUrl: './partials/contribution.html'
+		// })
 		.when('/contribution/add', {
 			templateUrl: './partials/addContribution.html'
 		})
 		.when('/maps', {
 			templateUrl: './partials/maps.html'
+		})
+		.when('/updates', {
+			templateUrl: './partials/contribution.html'
 		})
 		.otherwise({
 			redirectTo: '/'

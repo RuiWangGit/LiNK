@@ -17,12 +17,12 @@ module.exports = (function() {
 					// res.redirect("/");
 					return res.json(results);
 				}
-			})	
+			})
 		},
 
 		show: function(req, res){
 			console.log('testing6');
-			
+
 
 			Post.find({}).exec( function(err, results){
 				if ( err){

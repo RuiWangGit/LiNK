@@ -1,11 +1,26 @@
 <div ng-controller="contributionController">
-	<h1>Contribution</h1>
-	<div ng-repeat="contribution in contributions">
-		<div ng-if="contribution.contribution == true">
-			<p>Team <span ng-bind="contribution.team"></span> contributed $<span ng-bind="contribution.amount"></span> - <span ng-bind="contribution.created_at | date: short"></span></p>
+	<style>
+	#update {
+		text-align: center;
+	}
+	</style>
+	<h1 id="update">Updates</h1>
+	<div class="row">
+		<div class="col-md-6 text-center">
+			<h2>Contributions</h2>
+			<div ng-repeat="contribution in contributions">
+				<div ng-if="contribution.contribution == true">
+					<p>Team <span ng-bind="contribution.team"></span> contributed $<span ng-bind="contribution.amount"></span> - <span ng-bind="contribution.created_at | date: short"></span></p>
+				</div>
+			</div>
 		</div>
-		<div ng-if="contribution.contribution == false">
-			<p>Team <span ng-bind="contribution.team"></span> says: <span ng-bind="contribution.description"></span> - <span ng-bind="contribution.created_at | date: short"></span></p>
+		<div class="col-md-6 text-center">
+			<h2>Messages</h2>
+			<div ng-repeat="contribution in contributions">
+				<div ng-if="contribution.contribution == false">
+					<p>Team <span ng-bind="contribution.team"></span> says: <span ng-bind="contribution.description"></span> - <span ng-bind="contribution.created_at | date: short"></span></p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
