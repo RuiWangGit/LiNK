@@ -1,42 +1,14 @@
 
-
 <div class="header-div">
 
 	<p class="header">#OPERATION<span class="rescue">JUNGHA</span></p>
 	<p class="subtitle">350 Rescue Teams. One Mission.</p>
 
-	<img src="./../IMG/jungha.png" id="jungha">
+		<div id="overlay">
+			<p class="progress">$1440 Raised | $1560 To Go</p>
+		</div>
 
-
-
+		<img src="./../IMG/jungha.png" id="jungha">	
+	
 </div>
 
-
-<script>
-
-	$(document).ready(function () {
-		$('#jungha').loadgo('setprogress', 50);
-
-		var JungHaInterval;
-
-		function mainDemo () {
-		  var p = 0;
-		  // $('#jungha').loadgo('resetprogress');   // reset progress to start again
-
-		  JungHaInterval = window.setInterval(function (){
-		    if ($('#JungHaInterval').loadgo('getprogress') == 100) {
-		      // When progress completes, we have to clear the interval
-		      window.clearInterval(JungHaInterval);
-		    }
-		    else {
-		      var prog = p*10;
-		      $('#jungha').loadgo('setprogress', prog);
-		      p++;
-		    }
-		  }, 150);}
-
-		mainDemo();
-
-	});
-
-</script>

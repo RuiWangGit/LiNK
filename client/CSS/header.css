@@ -1,6 +1,24 @@
+html,body{
+	height: 100%;
+}
+
+.navbar-fixed-bottom {
+	margin-bottom: 0px;
+	border-width: 6px 0 0;
+    height: 60px; /* must not use percents here, must be 60px*/    
+}
+
+#content {
+    position: fixed;
+    top: 0px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    overflow:auto;
+}
 .header-div {
 
-	height: 665px;
+	height: 100%;
 	width: 100%;
 	background-color: #dd3928;
 	text-align: center;
@@ -8,7 +26,17 @@
 	font-family: Futura;
 	padding-top: 30px;
 	color: black;
+	position: relative;
 
+}
+
+.container {
+	left: 300px; 
+	position:absolute;
+	background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+	width: 500px; 
+	margin:0 auto;
 }
 
 .header {
@@ -28,14 +56,47 @@
 
 #jungha {
 	opacity: 1;
+	height: 488px;  
+	width: 383px;
+	/*position: relative;*/
+	/*border: 2px solid white;*/
+}
+
+#overlay {
+	position: absolute;
+	height: 212px;  
+	width: 383px;
+	top: 200px;
+	bottom:0;
+	left: 520px;
+	right:0;
+	z-index: 1000;
+	/*background-color: #fff;*/
+    background-color: #dd3928;
+    opacity: .9;
+    /*border: 2px solid black;*/
+    border-bottom: 1px solid white;
+    font-size: 20pt;
+    padding-top: 10%;
+}
+
+.progress {
+	font-size: 18pt;
+	height: 35px;
+	background-color: #dd3928;
+	color: white;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .navbar {
 	border-radius: 0px;
+	margin-bottom: 0px !important;
 }
 
 .navbar-nav{
 	text-align: center;
+	width: 100%;
 }
 nav li {
 	border: 1px solid black;
@@ -45,4 +106,19 @@ nav li {
 nav li:hover {
 	background-color: #dd3928;
 	color: black;
+}
+.content {
+
+}
+/* Responsive Nav Bar */
+.navbar-nav>li {
+	width: 25%;
+}
+#wrapper{
+	margin: 0px;
+}
+#nav_container{
+	position: absolute;
+	width: 100%;
+	margin-bottom: 0px;
 }
