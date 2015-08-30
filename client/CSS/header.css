@@ -133,8 +133,15 @@ nav li:hover {
 .navbar-nav>li {
 	width: 20%;
 }
+
 .ng-scope {
 	height: 100% !important;
+}
+
+@media screen and (max-width: 1360px) {
+    .header, #logo {
+		margin-right: 0px;
+	}
 }
 /*#wrapper{
 	margin: 0px;
