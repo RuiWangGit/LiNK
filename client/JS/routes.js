@@ -6,7 +6,7 @@ link.config(function ($routeProvider) {
 		.when('/', {
 			templateUrl: './partials/home.html'
 		})
-		.when('/', {
+		.when('/forum', {
 			templateUrl: './partials/forum.html'
 		})
 		.when('/instagram', {

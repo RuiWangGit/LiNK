@@ -1,11 +1,13 @@
 html,body{
 	height: 100%;
 }
-.navbar-fixed-bottom{
+
+.navbar-fixed-bottom {
 	margin-bottom: 0px;
 	border-width: 6px 0 0;
     height: 60px; /* must not use percents here, must be 60px*/    
 }
+
 #content {
     position: fixed;
     top: 0px;
@@ -16,7 +18,7 @@ html,body{
 }
 .header-div {
 
-	height: 665px;
+	height: 100%;
 	width: 100%;
 	background-color: #dd3928;
 	text-align: center;
@@ -24,7 +26,17 @@ html,body{
 	font-family: Futura;
 	padding-top: 30px;
 	color: black;
+	position: relative;
 
+}
+
+.container {
+	left: 300px; 
+	position:absolute;
+	background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+	width: 500px; 
+	margin:0 auto;
 }
 
 .header {
@@ -44,6 +56,35 @@ html,body{
 
 #jungha {
 	opacity: 1;
+	height: 488px;  
+	width: 383px;
+	/*position: relative;*/
+	/*border: 2px solid white;*/
+}
+
+#overlay {
+	position: absolute;
+	height: 212px;  
+	width: 383px;
+	top: 200px;
+	bottom:0;
+	left: 520px;
+	right:0;
+	z-index: 1000;
+	/*background-color: #fff;*/
+    background-color: #dd3928;
+    opacity: .9;
+    /*border: 2px solid black;*/
+    border-bottom: 1px solid white;
+    font-size: 20pt;
+    padding-top: 10%;
+    box-shadow
+}
+
+.progress {
+	font-size: 15pt;
+	height: 35px;
+	background-color: #dd3928;
 }
 
 .navbar {

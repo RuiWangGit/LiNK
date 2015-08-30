@@ -224,3 +224,11 @@ if (typeof jQuery === 'undefined') { throw new Error('LoadGo requires jQuery'); 
     };
 
   })(jQuery);
+
+
+
+
+
+
+
+  
