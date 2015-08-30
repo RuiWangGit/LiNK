@@ -1,34 +1,53 @@
 html,body{
 	height: 100%;
 }
-.navbar-fixed-bottom{
+
+.navbar-fixed-bottom {
 	margin-bottom: 0px;
 	border-width: 6px 0 0;
     height: 60px; /* must not use percents here, must be 60px*/    
 }
+
 #content {
     position: fixed;
     top: 0px;
     bottom: 20px;
     left: 0;
     right: 0;
-    overflow:auto;
+    overflow: auto;
 }
-.header-div {
 
-	height: 665px;
+.header-div {
+	height: 100%;
 	width: 100%;
 	background-color: #dd3928;
 	text-align: center;
-	font-size: 50pt;
+	font-size: 60pt;
 	font-family: Futura;
-	padding-top: 30px;
+	padding-top: 5px;
 	color: black;
+	position: relative;
+	display: inline-block;
+}
 
+#logo {
+	margin-right: 250px;
+}
+
+.container {
+	left: 300px; 
+	position: absolute;
+	background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+	width: 500px; 
+	margin:0 auto;
 }
 
 .header {
 	margin-bottom: 0px;
+	display: inline-block;
+	margin-right: 380px;
+
 }
 
 .rescue {
@@ -36,14 +55,42 @@ html,body{
 }
 
 .subtitle {
-	color: white;
-	font-size: 25pt;
+	color: #801906;
+	font-size: 20pt;
 	font-weight: lighter;
 	margin-bottom: 60px;
 }
 
 #jungha {
 	opacity: 1;
+	height: 488px;  
+	width: 383px;
+	/*position: relative;*/
+	/*border: 2px solid white;*/
+}
+
+#overlay {
+	position: absolute;
+	height: 252px;  
+	width: 383px;
+	top: 200px;
+	bottom:0;
+	left: 520px;
+	right:0;
+	z-index: 1000;
+    background-color: #dd3928;
+    opacity: .9;
+    border-bottom: 2px dashed white;
+    padding-top: 10%;
+}
+
+.progress {
+	font-size: 20pt;
+	height: 35px;
+	background-color: #dd3928;
+	color: white;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .navbar {
@@ -64,18 +111,23 @@ nav li:hover {
 	background-color: #dd3928;
 	color: black;
 }
-.content {
 
+#updates {
+	height: 500px;
+	width: 100%;
+	/*background-color: red;*/
 }
+
 /* Responsive Nav Bar */
 .navbar-nav>li {
-	width: 25%;
+	width: 20%;
 }
-#wrapper{
+/*#wrapper{
 	margin: 0px;
-}
-#nav_container{
+}*/
+/*#nav_container{
 	position: absolute;
 	width: 100%;
 	margin-bottom: 0px;
 }
+*/
