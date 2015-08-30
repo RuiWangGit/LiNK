@@ -50,9 +50,14 @@
 }
 
 
-#forum .form-comment{
+#forum form.form-comment{
 
 
+  background: white;
+  padding: 0px 15px;
+  margin: 5px 0;
+  height: 0;
+  overflow: hidden;
   z-index: 0;
   position: relative;
   opacity: 0;
@@ -63,6 +68,20 @@
 }
 
 
+#forum .comments {
+  background: white;
+  padding: 0px 15px;
+  margin: 5px 0;
+  height: 0;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .7s ease;
+  -moz-transition: .7s ease;
+  -o-transition: .7s ease;
+  transition: .7s ease;
+}
 
 #forum .description {
   background: white;
@@ -121,12 +140,22 @@
   padding: 15px;
 }
 
-#forum .post:checked ~ .form-comment{
+#forum .post:checked ~ form.form-comment{
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+}
+#forum .post:checked ~ .comments{
   height: auto;
   opacity: 1;
   padding: 15px;
 }
 
+#forum .post:checked ~ .comment{
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+}
 /*#forum .post:checked ~ .comments{
   height: auto;
   opacity: 1;

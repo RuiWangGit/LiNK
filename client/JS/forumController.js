@@ -18,7 +18,9 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 			$( '#hidden-post .post'  ).attr('id', 'id'+data._id);  
 
 			$( '#hidden-post .description').html(data.description );
-			$( '#hidden-post form .hidden_id'  ).attr('ng-init', "newComment.post_id='"+data._id +"'");
+			//$( '#hidden-post form .hidden_id'  ).attr('ng-init', "newComment.post_id='"+data._id +"'");
+			//$( '#hidden-post form .hidden_id'  ).attr('ng-value', "'"+data._id+"'");
+			$( '#hidden-post form '  ).attr('ng-submit', "addComment('"+data._id+"')");
 			// var ngInit = $( '#hidden-post form .hidden_id'  ).attr('ng-init'); 
 			// console.log('nginit'+ngInit);
 			// $( '#hidden-post form .hidden_id'  ).attr('value', ngInit+data._id); 
@@ -53,13 +55,14 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 
 
 
-	$scope.addComment = function(event){
+	$scope.addComment = function(id){
+		console.log("====="+id);
 		console.log('adding comment...');
 		console.log($scope.newComment);
 		console.log(event)
 		
 	
-
+		$scope.newComment.post_id = id;
 		//$scope.newComment.created_at = event.timeStamp;		
 		forumFactory.addComment($scope.newComment, function(data){
 
