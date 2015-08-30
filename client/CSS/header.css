@@ -14,25 +14,29 @@ html,body{
     bottom: 20px;
     left: 0;
     right: 0;
-    overflow:auto;
+    overflow: auto;
 }
-.header-div {
 
+.header-div {
 	height: 100%;
 	width: 100%;
 	background-color: #dd3928;
 	text-align: center;
-	font-size: 50pt;
+	font-size: 60pt;
 	font-family: Futura;
-	padding-top: 30px;
+	padding-top: 5px;
 	color: black;
 	position: relative;
+	display: inline-block;
+}
 
+#logo {
+	margin-right: 250px;
 }
 
 .container {
 	left: 300px; 
-	position:absolute;
+	position: absolute;
 	background-color: #fff;
     background-color: rgba(255,255,255,0.5);
 	width: 500px; 
@@ -41,6 +45,9 @@ html,body{
 
 .header {
 	margin-bottom: 0px;
+	display: inline-block;
+	margin-right: 380px;
+
 }
 
 .rescue {
@@ -48,8 +55,8 @@ html,body{
 }
 
 .subtitle {
-	color: white;
-	font-size: 25pt;
+	color: #801906;
+	font-size: 20pt;
 	font-weight: lighter;
 	margin-bottom: 60px;
 }
@@ -64,24 +71,21 @@ html,body{
 
 #overlay {
 	position: absolute;
-	height: 212px;  
+	height: 252px;  
 	width: 383px;
 	top: 200px;
 	bottom:0;
 	left: 520px;
 	right:0;
 	z-index: 1000;
-	/*background-color: #fff;*/
     background-color: #dd3928;
     opacity: .9;
-    /*border: 2px solid black;*/
-    border-bottom: 1px solid white;
-    font-size: 20pt;
+    border-bottom: 2px dashed white;
     padding-top: 10%;
 }
 
 .progress {
-	font-size: 18pt;
+	font-size: 20pt;
 	height: 35px;
 	background-color: #dd3928;
 	color: white;
@@ -107,18 +111,23 @@ nav li:hover {
 	background-color: #dd3928;
 	color: black;
 }
-.content {
 
+#updates {
+	height: 500px;
+	width: 100%;
+	/*background-color: red;*/
 }
+
 /* Responsive Nav Bar */
 .navbar-nav>li {
-	width: 25%;
+	width: 20%;
 }
-#wrapper{
+/*#wrapper{
 	margin: 0px;
-}
-#nav_container{
+}*/
+/*#nav_container{
 	position: absolute;
 	width: 100%;
 	margin-bottom: 0px;
 }
+*/
