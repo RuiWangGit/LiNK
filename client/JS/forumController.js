@@ -15,7 +15,9 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 
 			$( '#hidden-post label'  ).html( $scope.newPost.title );
 			$( '#hidden-post label'  ).attr('for', 'id'+data._id);	 
-			$( '#hidden-post .post'  ).attr('id', 'id'+data._id);  
+			$( '#hidden-post .post'  ).attr('id', 'id'+data._id); 
+			// $( '#hidden-post label'  ).attr('for', data._id);	 
+			// $( '#hidden-post .post'  ).attr('id', data._id); 
 
 			$( '#hidden-post .description').html(data.description );
 			//$( '#hidden-post form .hidden_id'  ).attr('ng-init', "newComment.post_id='"+data._id +"'");
@@ -39,7 +41,23 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 	$scope.postHashSet = [];
 
 	$scope.showComments = function(event){
-		console.dir(event.target.attributes[0].nodeValue);
+
+		console.log( "+++++++++++" );
+
+		console.log( $('#'+event.target.attributes[0].nodeValue ).parent().siblings().children().children() );
+		// $('#'+event.target.attributes[0].nodeValue ).parent().siblings().children().children().toggle();
+
+		// $('#'+event.target.attributes[0].nodeValue ).parent().siblings().children(':nth-child(4)').hide();	
+		// $('#'+event.target.attributes[0].nodeValue ).parent().siblings().children(':nth-child(5)').hide();
+		// $('#'+event.target.attributes[0].nodeValue ).parent().siblings().children(':nth-child(6)').hide();
+		// $('#'+event.target.attributes[0].nodeValue ).siblings().show();
+
+		$('#'+event.target.attributes[0].nodeValue ).parent().siblings().children(':nth-child(1)').removeAttr("checked");
+		//checkBoxes.attr("checked", !checkBoxes.attr("checked"));
+
+		// $('#'+event.target.attributes[0].nodeValue ).parent().siblings().children().children().children().hide();			
+
+		console.dir('dfff'+event.target.attributes[0].nodeValue);
 		var id = 'post-'+event.target.attributes[0].nodeValue;
 
 			if ($scope.postHashSet[id] == undefined) {
