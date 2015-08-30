@@ -14,7 +14,7 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 
 	$scope.getComments = function(post_id){
 
-		console.log(post_id);
+		//console.log(post_id);
 		forumFactory.getComments(post_id, function(data){
 			//console.log('testtttingcomments...');
 			$scope.comments = data;
@@ -155,7 +155,7 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
             	$scope.comments = [];
             	$scope.comments.unshift( 
 
-            		{ "_id" :data._id , "userName" :  $scope.newComment.userName, "comment" : $scope.newComment.comment, "post_id" : data.post_id , "updated_at" : Date.now(), "created_at" :Date.now() }
+            		{ "_id" :data._id , "userName" :  $scope.newComment.userName, "comment" : $scope.newComment.comment, "post_id" : data.post_id , "updated_at" : data.updated_at, "created_at" :data.created_at }
             
             	 );
             }
@@ -164,7 +164,7 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
             	$scope.comments.unshift( 
 
 
-            		{ "_id" :data._id , "userName" :  $scope.newComment.userName, "comment" : $scope.newComment.comment, "post_id" : data.post_id , "updated_at" : Date.now(), "created_at" :Date.now() }
+            		{ "_id" :data._id , "userName" :  $scope.newComment.userName, "comment" : $scope.newComment.comment, "post_id" : data.post_id , "updated_at" : data.updated_at, "created_at" :data.created_at }
 
 
             		);
