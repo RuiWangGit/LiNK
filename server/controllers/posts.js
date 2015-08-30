@@ -9,12 +9,13 @@ module.exports = (function() {
 
 		add: function(req, res){
 			var post = new Post(req.body);
-			post.save( function (err){
+			post.save( function (err, results){
 				if(err){
 					res.send("failed to save new post");
 				}
 				else {
-					res.redirect("/");
+					// res.redirect("/");
+					return res.json(results);
 				}
 			})	
 		}
