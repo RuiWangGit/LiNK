@@ -1,3 +1,11 @@
 <div ng-controller="contributionController">
 	<h1>Contribution</h1>
+	<div ng-repeat="contribution in contributions">
+		<div ng-if="contribution.contribution == true">
+			<p>Team <span ng-bind="contribution.team"></span> contributed $<span ng-bind="contribution.amount"></span> - <span ng-bind="contribution.created_at | date: short"></span></p>
+		</div>
+		<div ng-if="contribution.contribution == false">
+			<p>Team <span ng-bind="contribution.team"></span> says: <span ng-bind="contribution.description"></span> - <span ng-bind="contribution.created_at | date: short"></span></p>
+		</div>
+	</div>
 </div>

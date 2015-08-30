@@ -15,7 +15,8 @@ module.exports = function(app) {
 	  Contribution.show(req, res);
   })
   app.post('/contribution/add', function(req, res){
-      contribution.add(req, res);
+    //   console.log(req.body.contribution.toLowerCase());
+      Contribution.add(req, res);
   })
 
 

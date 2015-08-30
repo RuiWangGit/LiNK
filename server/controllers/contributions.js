@@ -17,7 +17,21 @@ module.exports = (function() {
 		},
 		add: function(req, res){
 			console.log('the req', req.body)
-			// var contribution = new Contribution({team: req.body.team})
+			var contributed
+			if (req.body.contribution.toLowerCase() == "yes") {
+				contributed = true
+			} else {
+				contributed = false
+			}
+			var contribution = new Contribution({team: req.body.team, amount: req.body.amount, description: req.body.description, contribution: contributed})
+			contribution.save(function(err){
+				if (err){
+					console.log("error saving to the db")
+				} else {
+					console.log("succesfully added to the db");
+					res.end();
+				}
+			})
 		}
 
 
