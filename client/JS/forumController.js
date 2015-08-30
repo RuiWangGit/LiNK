@@ -14,8 +14,8 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 			$('#myModal').modal('hide');
 
 			$( '#hidden-post label'  ).html( $scope.newPost.title );
-			$( '#hidden-post label'  ).attr('for', data._id);	 
-			$( '#hidden-post input'  ).attr('id', data._id);  
+			$( '#hidden-post label'  ).attr('for', 'id'+data._id);	 
+			$( '#hidden-post .post'  ).attr('id', 'id'+data._id);  
 
 			$( '#hidden-post .description').html(data.description );
 			$( '#hidden-post form .hidden_id'  ).attr('ng-init', "newComment.post_id='"+data._id +"'");
@@ -64,12 +64,12 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 		forumFactory.addComment($scope.newComment, function(data){
 
 
-			$( '.hidden-post-content .comments .comment'  ).html( $scope.newComment.comment );		
-	    	var div = $('.hidden-post-content .comments .comment');
+			$( '#hidden-post  .comments .comment'  ).html( $scope.newComment.comment );		
+	    	var div = $('#hidden-post .comments .comment');
 	    	var tmp = div.clone();
-            $( '#post-'+data.post_id+' .post-content .comments '  ).append(tmp );
+            $( '#post-'+data.post_id+'  .comments '  ).append(tmp );
 
-            $( '.hidden-post-content .comments .comment'  ).html( "" );
+            //$( '#hidden-post .comments .comment'  ).html( "" );
 
 		})
 
