@@ -24,7 +24,7 @@ module.exports = function(app) {
     	comments.show(req, res);
   	})
     app.get('/maps', function(req,res){
-      res.sendFile(__dirname+"/./client/partials/maps.html")
+      res.redirect("http://localhost:8000/partials/maps.html")
     })
 
   app.get('/contributions', function(req, res){
