@@ -5,6 +5,18 @@
   margin: 0 auto;
   padding: 0 60px 0 0;
   margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+#forum button{
+  background: #E46666;
+  border: 1px solid  red; 
+  color:white;
+}
+
+#forum button:hover{
+  background: #EA9898;
+  color:white;
 }
 
 #forum .content {
@@ -22,13 +34,17 @@
 
 #forum .title {
   position: relative;
-  background: #8E6666;
+  background: #B96C6C;
   margin: 0;
   padding: 10px 10px 10px 50px;
   display: block;
   width:100%;
   cursor: pointer;
   color: white;
+  box-shadow: 3px 3px 2px 2px rgba(50, 50, 50, 0.75);
+  max-width: 500px;
+  overflow-y:hidden;
+  overflow-x:scroll;
 }
 
 
@@ -81,6 +97,8 @@
   -moz-transition: .7s ease;
   -o-transition: .7s ease;
   transition: .7s ease;
+  
+
 }
 
 #forum .description {
@@ -96,6 +114,7 @@
   -moz-transition: .7s ease;
   -o-transition: .7s ease;
   transition: .7s ease;
+  /*border:1px solid #EA9898;*/
 }
 
 #forum div.content-of-post {
@@ -249,18 +268,33 @@
     height:0;
 }
 
-
+#forum .name-span{
+  font-weight: 600;
+  font-size: 14px;
+}
 
 
 
 #forum .username-box {
-  width:25%;
+  /*width:25%;*/
 }
 #forum .comment-box {
   width:50%;
 }
 #forum .comment-box input {
   width:100%;
+}
+
+#forum .comment{
+  margin: 10px 0;
+  margin-left:18%;
+  display: block;
+}
+
+#forum .single-post form{
+  width: 95%;
+  text-align: right;
+  padding-left: 20%;
 }
 
 

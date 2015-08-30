@@ -39,7 +39,7 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 			 // $( '#hidden-post label'  ).attr('for', data._id);
 			 // $( '#hidden-post .post'  ).attr('id', data._id);
 
-			$( '#hidden-post .description').html(data.description );
+			$( '#hidden-post .description').html("<span class='name-span'>"+$scope.newPost.userName + "</span> : "+data.description );
 			//$( '#hidden-post form .hidden_id'  ).attr('ng-init', "newComment.post_id='"+data._id +"'");
 			//$( '#hidden-post form .hidden_id'  ).attr('ng-value', "'"+data._id+"'");
 			$( '#hidden-post form '  ).attr('ng-submit', "addComment('"+data._id+"')");
@@ -52,7 +52,8 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
             $( '#hidden-post label'  ).html( "" );
 
             var temp = $compile(tmp)($scope);
-            angular.element( $('#forum-posts').append(temp) );
+            angular.element( $('#forum-posts').prepend(temp) );
+            $scope.newPost = {};
 
 		});
 
@@ -124,7 +125,7 @@ link.controller('forumController', function($scope, $location, $compile, $routeP
 		forumFactory.addComment($scope.newComment, function(data){
 
 
-			$( '#hidden-post  .comments .comment'  ).html( $scope.newComment.comment );
+			$( '#hidden-post  .comments .comment'  ).html( $scope.newComment.comment+" By "+ "<span class='name-span'>"+ $scope.newComment.userName+"</span> ");
 	    	var div = $('#hidden-post .comments .comment');
 	    	var tmp = div.clone();
             $( '#post-'+data.post_id+'  .comments '  ).append(tmp );
