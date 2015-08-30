@@ -78,13 +78,15 @@ html,body{
     border-bottom: 1px solid white;
     font-size: 20pt;
     padding-top: 10%;
-    box-shadow
 }
 
 .progress {
-	font-size: 15pt;
+	font-size: 18pt;
 	height: 35px;
 	background-color: #dd3928;
+	color: white;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .navbar {
