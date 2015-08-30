@@ -293,9 +293,11 @@
 }
 
 #forum .comment{
-  margin: 10px 0;
+  margin: 5px 0;
   margin-left:18%;
   display: block;
+  padding: 5px;
+  border-bottom:1px solid silver;
 }
 
 #forum .single-post form{
